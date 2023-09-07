@@ -7,7 +7,12 @@ const obj = {
     name: 'Maharajapura',
 }
 
-storage.set('places', JSON.stringify([obj]));
+const obj2 = {
+    id: 2,
+    name: 'Gwalior',
+}
+
+storage.set('places', JSON.stringify([obj, obj2]));
 
 export default storage;
 

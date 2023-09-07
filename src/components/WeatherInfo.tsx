@@ -5,32 +5,33 @@ type Props = {
 }
 
 function WeatherInfo({ data }: Props) {
+    const {wind_kph, humidity, vis_km, pressure_mb, cloud } = data.current;
     return (
         <View style={styles.container}>
             <View style={styles.row}>
                 <View style={styles.item}>
-                    <Text style={styles.h1}> 13 km/h </Text>
+                    <Text style={styles.h1}> {wind_kph} km/h </Text>
                     <Text style={styles.h2}> Wind </Text>
                 </View>
                 <Divider />
                 <View style={styles.item}>
-                    <Text style={styles.h1}> 24% </Text>
+                    <Text style={styles.h1}> {humidity}% </Text>
                     <Text style={styles.h2}> Humidily </Text>
                 </View>
                 <Divider />
                 <View style={styles.item}>
-                    <Text style={styles.h1}> 87% </Text>
+                    <Text style={styles.h1}> {cloud}% </Text>
                     <Text style={styles.h2}> Rain </Text>
                 </View>
             </View>
             <View style={styles.row}>
                 <View style={styles.item}>
-                    <Text style={styles.h1}> 100 mb </Text>
+                    <Text style={styles.h1}> {pressure_mb} mb </Text>
                     <Text style={styles.h2}> Pressure </Text>
                 </View>
                 <Divider />
                 <View style={styles.item}>
-                    <Text style={styles.h1}> 6 km </Text>
+                    <Text style={styles.h1}> {vis_km} km </Text>
                     <Text style={styles.h2}> Visiblity </Text>
                 </View>
                 <Divider />

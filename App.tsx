@@ -6,13 +6,14 @@ import ProfileScreen from './src/screens/ProfileScreen';
 import NavigationBar from './src/components/NavigationBar';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import CustomTabBar from './src/components/CustomTabBar';
-import Notifications from './src/screens/Notifications';
+import Notifications from './src/screens/NotificationsScreen';
 import ExploreScreen from './src/screens/ExploreScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator()
 
 export default function App() {
+
   return (
     <NavigationContainer>
       {/* tabs */}

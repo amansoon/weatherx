@@ -7,7 +7,6 @@ type Props = {}
 
 export default function SavedPlaces({ }: Props) {
     const savedCities = JSON.parse(storage.getString('places') as string)
-    console.log(savedCities)
 
     return <View style={styles.places}>
         {savedCities.map((city) => {
